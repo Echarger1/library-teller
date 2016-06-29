@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    class DVD
+    class DVD : Media
     {
+
     }
 }

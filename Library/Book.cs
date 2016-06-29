@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library
 {
-    class Book
+    class Book : Media
     {
     }
 }
