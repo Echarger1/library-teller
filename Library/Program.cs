@@ -30,7 +30,7 @@ namespace Library
                 //match each needed component
                 //populae with your regex to match the format
 
-                Match match = Regex.Match(s, @"");
+                Match match = Regex.Match(s, @"\b(Type: [A-Za-z]+,)(Title+\: .+,)(Length+\: [0-9]*[a-z]* [0-9]*[a-z]*)", RegexOptions.IgnoreCase);
                 if (match.Success)
                 {
                     //populate each component with the values from your capture groups
