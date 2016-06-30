@@ -20,7 +20,9 @@ namespace Library
                 if (!File.Exists(path))
                 {
                     //throw appropriate exepction
+
                         //implement
+
                 }
 
                 //initialize the empty string we'll be using for each line
@@ -40,12 +42,16 @@ namespace Library
             catch (FileNotFoundException)
             {
                 //write out appropriate message
+                Console.WriteLine("File not found");
                     //implement
+
             }
             catch (Exception e)
             {
                 //write out the message of e
+                Console.WriteLine("Error ");
                     //implement
+
             }
 
             return mediaFile;

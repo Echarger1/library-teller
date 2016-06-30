@@ -12,6 +12,7 @@ namespace Library
         static void Main(string[] args)
         {
             //set the rental dates for each type via a static field
+
                 //implement
 
             //create a list a propulate it with the date in our file
