@@ -20,13 +20,14 @@ namespace Library
 
             //populate mediaToRent with the values returned from getFile instead of an empty list e.g. "new List<string>();"
             //implement
-            List<string> mediaToRent = new List<string>();
-            
+            List<string> mediaToRent = getFile.ReturnMediaFile(@"..\..\media.txt");
+
             //create a new list for us to use to store our media objects to rent
             List<Media> rentedMedia = new List<Media>();
 
             //for each line from the rental 
             foreach( string s in mediaToRent)
+             
             {
                 //match each needed component
                 //populae with your regex to match the format
@@ -42,12 +43,34 @@ namespace Library
                     //using the components we got figure out which type of object we should create and insert
                     if (type.Equals("Book"))
                     {
+                        Book newBook = new Book();
+                        newBook.Title = title;
+                        newBook.Length = length;
+
                         //create a book object
                         //populate the book object with a title and length
                         //then add the newly created book to rentedMedia
                     }
+                    else if (type.Equals("DVD"))
+                    {
+                        DVD newDvd = new DVD();
+                        newDvd.Title = title;
+                        newDvd.Length = length;
+                        
+                    }
+                    else if (type.Equals("Magazine"))
+                    {
+                        Magazine newMagazine = new Magazine();
+                        newMagazine.Title = title;
+                        newMagazine.Length = length;
+                       
+                    }
+                    else
+                    {
+                        Console.WriteLine("TYPE NOT VALID");
+                    }
                     //complete for the DVD and Magazine media types
-                        //implement
+                    //implement
                 }
             }
 
@@ -55,7 +78,8 @@ namespace Library
             foreach (Media mediaItem in rentedMedia)
             {
                 //for each mediaItem call PrintMediaDetails()
-                    //implement
+                //implement
+                mediaItem.PrintMediaDetails();
             }
 
             //halt the program so we can read the output

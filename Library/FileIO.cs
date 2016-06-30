@@ -20,9 +20,8 @@ namespace Library
                 if (!File.Exists(path))
                 {
                     //throw appropriate exepction
-
-                        //implement
-
+                    //implement
+                    throw new FileNotFoundException(@"No file found at path given");
                 }
 
                 //initialize the empty string we'll be using for each line
@@ -49,7 +48,7 @@ namespace Library
             catch (Exception e)
             {
                 //write out the message of e
-                Console.WriteLine("Error ");
+                Console.WriteLine("Error");
                     //implement
 
             }
