@@ -14,6 +14,8 @@ namespace Library
             //initialize the list we'll be returning
             List<string> mediaFile = new List<string>();
 
+            Console.WriteLine(path); 
+
             try
             {
                 //check to see whether the file exists
@@ -21,14 +23,23 @@ namespace Library
                 {
                     //throw appropriate exepction
                     //implement
-                    throw new FileNotFoundException(@"No file found at path given");
+                    throw new FileNotFoundException(@"No file found");
                 }
 
                 //initialize the empty string we'll be using for each line
                 string line;
 
                 //open a StreamReader to the file specifcied in the path variable 
-                    //implement
+                    using (StreamReader reader = new StreamReader(path))
+                {
+                    line = reader.ReadLine();
+
+                    while (line != null)
+                    {
+                        mediaFile.Add(line);
+                        line = reader.ReadLine();
+                    }
+                }
 
                 //while reading a new from file, addd each line to mediaFile
                 //as long as each new line is not null
@@ -48,7 +59,7 @@ namespace Library
             catch (Exception e)
             {
                 //write out the message of e
-                Console.WriteLine("Error");
+                Console.WriteLine(e.Message);
                     //implement
 
             }

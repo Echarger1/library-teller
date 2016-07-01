@@ -46,7 +46,7 @@ namespace Library
                         Book newBook = new Book();
                         newBook.Title = title;
                         newBook.Length = length;
-
+                        rentedMedia.Add(newBook);
                         //create a book object
                         //populate the book object with a title and length
                         //then add the newly created book to rentedMedia
@@ -56,14 +56,14 @@ namespace Library
                         DVD newDvd = new DVD();
                         newDvd.Title = title;
                         newDvd.Length = length;
-                        
+                        rentedMedia.Add(newDvd);
                     }
                     else if (type.Equals("Magazine"))
                     {
                         Magazine newMagazine = new Magazine();
                         newMagazine.Title = title;
                         newMagazine.Length = length;
-                       
+                        rentedMedia.Add(newMagazine);
                     }
                     else
                     {
